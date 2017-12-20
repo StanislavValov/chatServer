@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name = "com.qaiware.persistence.ChatEntity" table = "MESSAGES">
+
+        <meta attribute = "class-description">
+            This class contains the message detail.
+        </meta>
+
+        <id name = "id" type = "int" column = "id">
+            <generator class="native"/>
+        </id>
+
+        <property name = "type" column = "type" type = "string"/>
+        <property name = "payload" column = "payload" type = "string"/>
+        <property name = "createdAt" column = "createdAt" type = "java.util.Date"/>
+
+    </class>
+</hibernate-mapping>
