@@ -4,7 +4,7 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name = "com.qaiware.persistence.ChatEntity" table = "MESSAGES">
+    <class name = "com.qaiware.persistence.ChatEntity" table = "Messages">
 
         <meta attribute = "class-description">
             This class contains the message detail.
@@ -16,7 +16,7 @@
 
         <property name = "type" column = "type" type = "string"/>
         <property name = "payload" column = "payload" type = "string"/>
-        <property name = "createdAt" column = "createdAt" type = "java.util.Date"/>
+        <property name = "createdAt" column = "createdAt" type = "date"/>
 
     </class>
 </hibernate-mapping>

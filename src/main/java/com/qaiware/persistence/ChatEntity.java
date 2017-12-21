@@ -1,12 +1,17 @@
 package com.qaiware.persistence;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Date;
 
 /**
  * Created by Stan on 19.12.2017 г..
  */
+@Entity(name = "Messages")
 public class ChatEntity {
+    @Id
     private int id;
+
     private String type;
     private String payload;
     private Date createdAt;
@@ -15,6 +20,9 @@ public class ChatEntity {
         this.type = type;
         this.payload = payload;
         this.createdAt = createdAt;
+    }
+
+    public ChatEntity() {
     }
 
     public int getId() {

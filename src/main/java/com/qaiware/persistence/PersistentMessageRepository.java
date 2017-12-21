@@ -42,7 +42,8 @@ public class PersistentMessageRepository implements MessageRepository {
     }
 
     private ChatEntity adapt(Message message) {
-        String type = message.getClass().getName();
+        String type = message.getClass().toString();
+        type = type.substring(type.lastIndexOf('.') + 1);
 
         return new ChatEntity(type, message.getValue(), new Date());
     }

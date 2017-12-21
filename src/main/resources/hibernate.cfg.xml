@@ -12,10 +12,8 @@
             com.mysql.jdbc.Driver
         </property>
 
-        <!-- Assume test is the database name -->
-
         <property name = "hibernate.connection.url">
-            jdbc:mysql://localhost/test
+            jdbc:mysql://localhost:3305/chatDB
         </property>
 
         <property name = "hibernate.connection.username">
@@ -26,7 +24,6 @@
             root123
         </property>
 
-        <!-- List of XML mapping files -->
         <mapping resource = "ChatEntyty.hbm.xml"/>
 
     </session-factory>
